@@ -1,1 +1,3 @@
-テスト
+<template>
+   テスト
+</template>
