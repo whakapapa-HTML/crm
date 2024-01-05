@@ -7,5 +7,5 @@ Inertiaテスト<br>
 <a href="/">aタグ経由</a><br>
 <Link href="/">Link経由</Link><br>
 <Link :href="route('inertia.index')">名前付きルート</Link><br>
-<Link :href="route('inertia.show', {id: 1})">ルートパラメータテスト</Link>
+<Link :href="route('inertia.show', {id: 50})">ルートパラメータテスト</Link>
 </template>
