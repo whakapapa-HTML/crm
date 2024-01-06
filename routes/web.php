@@ -25,6 +25,7 @@ Route::get(
 );
 
 Route::get('/inertia/index', [InertiaTestController::class, 'index'])->name('inertia.index');
+Route::post('/inertia', [InertiaTestController::class, 'store'])->name('inertia.store');
 Route::get('/inertia/show/{id}', [InertiaTestController::class, 'show'])->name('inertia.show');
 
 Route::get('/', function () {
