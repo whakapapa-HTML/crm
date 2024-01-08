@@ -13,17 +13,30 @@ class InertiaTestController extends Controller
         return Inertia::render('Inertia/Index');
     }
 
+    public function create()
+    {
+        return Inertia::render('Inertia/Create');
+    }
+
     public function show($id)
     {
         // dd($id);
-        return Inertia::render('Inertia/Show',
-        [
-            'id' => $id
-        ]);
+        return Inertia::render(
+            'Inertia/Show',
+            [
+                'id' => $id
+            ]
+        );
     }
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => ['required', 'max:20'],
+            'content' => ['required'],
+        ]);
+
+        // dd($request->title);
         $inertiaTest = new InertiaTest;
         $inertiaTest->title = $request->title;
         $inertiaTest->content = $request->content;
