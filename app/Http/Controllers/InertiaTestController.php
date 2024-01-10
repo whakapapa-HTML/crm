@@ -10,7 +10,9 @@ class InertiaTestController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Inertia/Index');
+        return Inertia::render('Inertia/Index', [
+            'blogs' => InertiaTest::all()
+        ]);
     }
 
     public function create()
@@ -43,8 +45,8 @@ class InertiaTestController extends Controller
         $inertiaTest->save();
 
         return to_route('inertia.index')
-        ->with([
-            'message' => '登録しました'
-        ]);
+            ->with([
+                'message' => '登録しました'
+            ]);
     }
 }
