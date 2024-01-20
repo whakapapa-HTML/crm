@@ -35,7 +35,7 @@ class ItemController extends Controller
      * @param  \App\Http\Requests\StoreItemRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreItemRequest $request)
+    public function store( $request)
     {
         //
     }
