@@ -40,7 +40,10 @@ defineProps({
                                             <td class="px-4 py-3">{{ item.id }}</td>
                                             <td class="px-4 py-3">{{ item.name }}</td>
                                             <td class="px-4 py-3">{{ item.price }}</td>
-                                            <td class="px-4 py-3 text-lg text-gray-900">{{ item.is_selling }}</td>
+                                            <td class="px-4 py-3 text-lg text-gray-900">
+                                                <span v-if="item.is_selling === 1">販売中</span>
+                                                <span v-if="item.is_selling === 0">停止中</span>
+                                            </td>
                                             <td class="w-10 text-center">
                                                 <input name="plan" type="radio">
                                             </td>
