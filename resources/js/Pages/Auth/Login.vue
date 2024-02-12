@@ -11,7 +11,7 @@ import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
 defineProps({
     canResetPassword: Boolean,
     status: String,
-    errors: Object,
+    // errors: Object,
 });
 
 const form = useForm({
