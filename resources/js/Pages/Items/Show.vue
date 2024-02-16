@@ -12,6 +12,7 @@ const deleteItem = id => {
         onBefore: () => confirm('削除？')
     })
 }
+
 </script>
 
 <template>
